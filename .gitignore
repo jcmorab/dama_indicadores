@@ -1,0 +1,16 @@
+# Este repositorio guarda solo código. Los datos viven en OneDrive (dama_indicadores/bronce, plata, oro).
+*.dta
+*.xlsx
+*.xls
+*.csv
+*.pkl
+*.parquet
+*.zip
+*.txt
+*.log
+*.smcl
+*.gph
+.Rhistory
+~$*
+.DS_Store
+Thumbs.db
