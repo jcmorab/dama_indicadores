@@ -9,20 +9,20 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/6_socioemocionales"
-cd "$trabajo/6_socioemocionales"
+capture mkdir "$trabajo/06_socioemocionales"
+cd "$trabajo/06_socioemocionales"
 
 **#2. Importe de bases de datos
 
-import delimited using "$bronce/fundacion_socioemocionales/pri.csv", clear varnames(1) stringcols(_all) encoding("UTF-8")
+import delimited using "$bronce/luker_socioemocionales/pri.csv", clear varnames(1) stringcols(_all) encoding("UTF-8")
 g nivel="primaria"
 save primaria,replace
 
-import delimited using "$bronce/fundacion_socioemocionales/sec.csv", clear varnames(1) stringcols(_all) encoding("UTF-8")
+import delimited using "$bronce/luker_socioemocionales/sec.csv", clear varnames(1) stringcols(_all) encoding("UTF-8")
 g nivel="secundaria"
 save secundaria,replace
 
-import delimited using "$bronce/fundacion_socioemocionales/med.csv", clear varnames(1) stringcols(_all) encoding("UTF-8")
+import delimited using "$bronce/luker_socioemocionales/med.csv", clear varnames(1) stringcols(_all) encoding("UTF-8")
 g nivel="media"
 save media,replace
 
@@ -84,7 +84,7 @@ keep indicador categoria* anio valor cod_entidad
 order indicador categoria* cod_entidad anio valor 
 *sort cod_indicador categoria* cod_entidad anio valor 
 
-export excel using "$plata/Indicadores FunLuker - socioemocionales.xlsx", sheet("base",replace) firstrow(variables)
+export excel using "$plata/06_socioemocionales.xlsx", sheet("base",replace) firstrow(variables)
 
 ***
 **

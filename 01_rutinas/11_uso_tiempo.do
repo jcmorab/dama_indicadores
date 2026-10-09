@@ -14,8 +14,8 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/10_uso_tiempo"
-cd "$trabajo/10_uso_tiempo"
+capture mkdir "$trabajo/11_uso_tiempo"
+cd "$trabajo/11_uso_tiempo"
 
 **#2. Procesamientos
 
@@ -75,7 +75,7 @@ keep cod_indicador categoria anio valor cod_entidad
 order cod_indicador categoria cod_entidad anio valor
 sort cod_indicador categoria cod_entidad anio valor
 
-export excel using "$plata/Indicadores FunLuker - trabajo no remunerado.xlsx", sheet("base",replace) firstrow(variables)
+export excel using "$plata/11_uso_tiempo.xlsx", sheet("base",replace) firstrow(variables)
 
 *** FIN
 **

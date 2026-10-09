@@ -9,8 +9,8 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/4_geih"
-cd "$trabajo/4_geih"
+capture mkdir "$trabajo/04_geih"
+cd "$trabajo/04_geih"
 
 **#2. Procesamientos
 use "$geih/bd2025/GEIH_2025_ampliada.dta",clear
@@ -149,7 +149,7 @@ order cod_indicador categoria* cod_entidad anio valor
 sort cod_indicador categoria* cod_entidad anio valor 
 drop if cod_entidad==0
 
-export excel using "$plata/Indicadores FunLuker - geih.xlsx", sheet("base",replace) firstrow(variables)
+export excel using "$plata/04_geih.xlsx", sheet("base",replace) firstrow(variables)
 
 ***
 **

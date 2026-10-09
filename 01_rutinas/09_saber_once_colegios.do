@@ -13,8 +13,8 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/8_saber_once"
-cd "$trabajo/8_saber_once"
+capture mkdir "$trabajo/09_saber_once_colegios"
+cd "$trabajo/09_saber_once_colegios"
 set dp period
 
 *2. Creación de base global preliminar
@@ -108,7 +108,7 @@ order cod_indicador categoria* cod_entidad entidad anio valor
 sort cod_indicador categoria* cod_entidad entidad anio valor 
 drop if cod_entidad==0
 
-export excel using "$plata/Indicadores FunLuker - saber_once_colegios.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/09_saber_once_colegios.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **

@@ -9,8 +9,8 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/1_coberturas_men"
-cd "$trabajo/1_coberturas_men"
+capture mkdir "$trabajo/01_coberturas_men"
+cd "$trabajo/01_coberturas_men"
 
 **#2. Procesamientos
 
@@ -44,7 +44,7 @@ drop if cod_entidad==0
 
 keep if cod_entidad==63001 | cod_entidad==8001 | cod_entidad==11001 | cod_entidad==68001 | cod_entidad==76001 | cod_entidad==13001 | cod_entidad==54001 | cod_entidad==18001 | cod_entidad==73001 | cod_entidad==17001 | cod_entidad==5001 | cod_entidad==23001 | cod_entidad==41001 | cod_entidad==52001 | cod_entidad==66001 | cod_entidad==19001 | cod_entidad==27001 | cod_entidad==44001 | cod_entidad==47001 | cod_entidad==70001 | cod_entidad==15001 | cod_entidad==20001 | cod_entidad==50001
 
-export excel using "$plata/Indicadores FunLuker - coberturas_men.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/01_coberturas_men.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **

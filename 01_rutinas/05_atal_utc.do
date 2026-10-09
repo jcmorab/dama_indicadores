@@ -9,13 +9,13 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/5_atal_utc"
-cd "$trabajo/5_atal_utc"
+capture mkdir "$trabajo/05_atal_utc"
+cd "$trabajo/05_atal_utc"
 
 **#2. Procesamientos
 
 **##2.1 Fluidez lectora
-import excel "$bronce/fundacion_fluidez_lectora/FLUIDEZ_LECTURA_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/luker_fluidez_lectora/FLUIDEZ_LECTURA_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
 destring valor grado anio,replace
 lab define grado 1"Primero"2"Segundo"3"Tercero"4"Cuarto"5"Quinto"
 lab values grado grado
@@ -104,12 +104,12 @@ save ATAL_4,replace
 restore
 
 **##2.2 Universidad en tu colegio
-import excel "$bronce/fundacion_utc/bd_historica_utc.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/luker_utc/bd_historica_utc.xlsx", sheet("Sheet1") firstrow clear
 keep año categoría dato indicador categoría2
 rename (año categoría dato indicador categoría2) ( ano categoría dato indicador categoría_2)
 save UTC_historico,replace
 
-import excel "$bronce/fundacion_utc/LA_U_EN_TU_COLEGIO_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/luker_utc/LA_U_EN_TU_COLEGIO_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
 
 preserve
 g dato=1
@@ -174,7 +174,7 @@ rename (categoría categoría_2 dato) (categoria categoria_2 valor)
 order cod_indicador categoria categoria_2 cod_entidad entidad anio valor
 compress
 dropmiss,force
-export excel using "$plata/Indicadores FunLuker - UTC ATAL.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/05_atal_utc.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **

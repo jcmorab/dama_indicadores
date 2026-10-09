@@ -1,19 +1,14 @@
-# Este repositorio guarda solo código. Los datos viven en OneDrive (dama_indicadores/bronce, plata, oro).
+# Solo código y catálogos; los datos se almacenan por fuera
 *.dta
 *.xlsx
 *.xls
 *.csv
-*.pkl
-*.parquet
-*.zip
 *.txt
 *.log
 *.smcl
 *.gph
-.Rhistory
 ~$*
 .DS_Store
 Thumbs.db
-
-# Excepción: los catálogos son definiciones editadas a mano y sí se versionan
-!catalogos/*.csv
+__pycache__/
+!02_catalogos/*.csv

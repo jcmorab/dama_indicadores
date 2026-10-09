@@ -9,8 +9,8 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/3_noes"
-cd "$trabajo/3_noes"
+capture mkdir "$trabajo/03_noes"
+cd "$trabajo/03_noes"
 
 **#2. Procesamientos
 
@@ -92,7 +92,7 @@ order cod_indicador categoria* cod_entidad anio valor
 sort cod_indicador categoria* cod_entidad anio valor 
 drop if cod_entidad==0
 
-export excel using "$plata/Indicadores FunLuker - noes.xlsx", sheet("base",replace) firstrow(variables)
+export excel using "$plata/03_noes.xlsx", sheet("base",replace) firstrow(variables)
 
 *** FIN
 **

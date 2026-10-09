@@ -9,20 +9,20 @@ if "$dama" == "" {
 	display as error "Primero corra 00_config.do"
 	exit 198
 }
-capture mkdir "$trabajo/9_beneficiarios"
-cd "$trabajo/9_beneficiarios"
+capture mkdir "$trabajo/10_beneficiarios"
+cd "$trabajo/10_beneficiarios"
 
-import delimited "$bronce/fundacion_beneficiarios/df_utc_anonimizado.csv",clear
+import delimited "$bronce/luker_beneficiarios/df_utc_anonimizado.csv",clear
 tab ano
 duplicates report ano id_anonimo
 
-import excel "$bronce/fundacion_beneficiarios/df_egra_manizales_anonimizado.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/luker_beneficiarios/df_egra_manizales_anonimizado.xlsx", sheet("Sheet1") firstrow clear
 keep if prueba=="entrada"
 duplicates report ano id_anonimo
 keep if calificador=="Lectura Pasaje"
 tab ano
 
-import excel "$bronce/fundacion_beneficiarios/df_beneficiarios.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/luker_beneficiarios/df_beneficiarios.xlsx", sheet("Sheet1") firstrow clear
 destring valor grado anio,replace
 lab define grado 1"Primero"2"Segundo"3"Tercero"4"Cuarto"5"Quinto"
 lab values grado grado
