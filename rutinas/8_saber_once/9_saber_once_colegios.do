@@ -7,19 +7,25 @@
 **********************************
 
 *1. Definición de directorios
+*Las rutas se definen en 00_config.do
 clear all
-cd "C:\Users\juanc\OneDrive\MD\ICFES"
+if "$dama" == "" {
+	display as error "Primero corra 00_config.do"
+	exit 198
+}
+capture mkdir "$trabajo/8_saber_once"
+cd "$trabajo/8_saber_once"
 set dp period
 
 *2. Creación de base global preliminar
-use "examen_saber_11_20151.txt.dta",clear
-append using "examen_saber_11_20152.txt.dta"
+use "$icfes/examen_saber_11_20151.txt.dta",clear
+append using "$icfes/examen_saber_11_20152.txt.dta"
 keep cole_cod_dane_establecimiento cole_nombre_establecimiento periodo estu_genero cole_area_ubicacion cole_naturaleza punt_lectura_critica punt_matematicas punt_c_naturales punt_sociales_ciudadanas punt_ingles punt_global estu_agregado cole_cod_mcpio_ubicacion estu_grado
 
 
 forvalues i=2016/2025 {
-append using "examen_saber_11_`i'1.txt.dta",keep(cole_cod_dane_establecimiento cole_nombre_establecimiento periodo estu_genero cole_area_ubicacion cole_naturaleza punt_lectura_critica punt_matematicas punt_c_naturales punt_sociales_ciudadanas punt_ingles punt_global estu_agregado cole_cod_mcpio_ubicacion estu_grado)
-append using "examen_saber_11_`i'2.txt.dta",keep(cole_cod_dane_establecimiento cole_nombre_establecimiento periodo estu_genero cole_area_ubicacion cole_naturaleza punt_lectura_critica punt_matematicas punt_c_naturales punt_sociales_ciudadanas punt_ingles punt_global estu_agregado cole_cod_mcpio_ubicacion estu_grado)
+append using "$icfes/examen_saber_11_`i'1.txt.dta",keep(cole_cod_dane_establecimiento cole_nombre_establecimiento periodo estu_genero cole_area_ubicacion cole_naturaleza punt_lectura_critica punt_matematicas punt_c_naturales punt_sociales_ciudadanas punt_ingles punt_global estu_agregado cole_cod_mcpio_ubicacion estu_grado)
+append using "$icfes/examen_saber_11_`i'2.txt.dta",keep(cole_cod_dane_establecimiento cole_nombre_establecimiento periodo estu_genero cole_area_ubicacion cole_naturaleza punt_lectura_critica punt_matematicas punt_c_naturales punt_sociales_ciudadanas punt_ingles punt_global estu_agregado cole_cod_mcpio_ubicacion estu_grado)
 }
 
 *3. Selección de ciudades de análisis
@@ -47,7 +53,7 @@ rename `var' t_`var'
 
 replace cole_area_ubicacion="URBANO" if cole_area_ubicacion=="URBANA"
 
-cd "C:\Users\juanc\OneDrive\Luker\2026\Sistema M&E\Rutinas\8_saber_once"
+*La carpeta de trabajo ya se fijó al inicio
 
 foreach var of varlist Total estu_genero cole_naturaleza cole_area_ubicacion  {
 preserve
@@ -102,7 +108,7 @@ order cod_indicador categoria* cod_entidad entidad anio valor
 sort cod_indicador categoria* cod_entidad entidad anio valor 
 drop if cod_entidad==0
 
-export excel using "Indicadores FunLuker - saber_once_colegios.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/Indicadores FunLuker - saber_once_colegios.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **

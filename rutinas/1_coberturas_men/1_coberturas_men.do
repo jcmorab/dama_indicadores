@@ -3,13 +3,19 @@
 *Última modificación: 03/05/2026
 
 **#1. Declaración de carpeta de trabajo
+*Las rutas se definen en 00_config.do
 clear all
-cd "C:\Users\juanc\OneDrive\Luker\2026\Sistema M&E\Rutinas\1_coberturas_men" // Directorio para ser modificado
+if "$dama" == "" {
+	display as error "Primero corra 00_config.do"
+	exit 198
+}
+capture mkdir "$trabajo/1_coberturas_men"
+cd "$trabajo/1_coberturas_men"
 
 **#2. Procesamientos
 
 **##2.1 Selección de variables de interés
-import excel "MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR,_BÁSICA_Y_MEDIA_POR_MUNICIPIO_20260511.xlsx", sheet("Data") firstrow clear
+import excel "$bronce/men_coberturas/MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR,_BÁSICA_Y_MEDIA_POR_MUNICIPIO_20260511.xlsx", sheet("Data") firstrow clear
 
 keep AÑO CÓDIGO_MUNICIPIO COBERTURA_NETA_TRANSICIÓN COBERTURA_NETA_PRIMARIA COBERTURA_NETA_SECUNDARIA COBERTURA_NETA_MEDIA DESERCIÓN
 
@@ -38,7 +44,7 @@ drop if cod_entidad==0
 
 keep if cod_entidad==63001 | cod_entidad==8001 | cod_entidad==11001 | cod_entidad==68001 | cod_entidad==76001 | cod_entidad==13001 | cod_entidad==54001 | cod_entidad==18001 | cod_entidad==73001 | cod_entidad==17001 | cod_entidad==5001 | cod_entidad==23001 | cod_entidad==41001 | cod_entidad==52001 | cod_entidad==66001 | cod_entidad==19001 | cod_entidad==27001 | cod_entidad==44001 | cod_entidad==47001 | cod_entidad==70001 | cod_entidad==15001 | cod_entidad==20001 | cod_entidad==50001
 
-export excel using "Indicadores FunLuker - coberturas_men.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/Indicadores FunLuker - coberturas_men.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **

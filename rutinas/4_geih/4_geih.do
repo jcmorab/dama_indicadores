@@ -3,11 +3,17 @@
 *Última modificación: 03/05/2026
 
 **#1. Declaración de carpeta de trabajo
+*Las rutas se definen en 00_config.do
 clear all
-cd "C:\Users\juanc\OneDrive\Luker\2026\Sistema M&E\Rutinas\4_geih" // Directorio para ser modificado
+if "$dama" == "" {
+	display as error "Primero corra 00_config.do"
+	exit 198
+}
+capture mkdir "$trabajo/4_geih"
+cd "$trabajo/4_geih"
 
 **#2. Procesamientos
-use "C:\Users\juanc\OneDrive\MD\GEIH\Archivos planos\bd2025\GEIH_2025_ampliada.dta",clear
+use "$geih/bd2025/GEIH_2025_ampliada.dta",clear
 
 g año=2026
 g PET=(p6040>=15)
@@ -143,7 +149,7 @@ order cod_indicador categoria* cod_entidad anio valor
 sort cod_indicador categoria* cod_entidad anio valor 
 drop if cod_entidad==0
 
-export excel using "Indicadores FunLuker - geih.xlsx", sheet("base",replace) firstrow(variables)
+export excel using "$plata/Indicadores FunLuker - geih.xlsx", sheet("base",replace) firstrow(variables)
 
 ***
 **

@@ -3,14 +3,20 @@
 *Última modificación: 03/05/2026
 
 **#1. Declaración de carpeta de trabajo
+*Las rutas se definen en 00_config.do
 clear all
-cd "C:\Users\juanc\OneDrive\Luker\2026\Sistema M&E\Rutinas\2_tasa_transito" // Directorio para ser modificado
+if "$dama" == "" {
+	display as error "Primero corra 00_config.do"
+	exit 198
+}
+capture mkdir "$trabajo/2_tasa_transito"
+cd "$trabajo/2_tasa_transito"
 
 **#2. Procesamientos
-local files: dir "C:\Users\juanc\OneDrive\Luker\2026\Sistema M&E\Rutinas\2_tasa_transito" files "*.xlsx"
+local files: dir "$bronce/men_transito_inmediato" files "*.xlsx"
 
 foreach file in `files' {
-import excel "`file'", sheet("TTI_MUNICIPIOS") allstring clear
+import excel "$bronce/men_transito_inmediato/`file'", sheet("TTI_MUNICIPIOS") allstring clear
 keep if C!=""
 
 ds
@@ -65,7 +71,7 @@ keep cod_indicador categoria* anio valor cod_entidad
 order cod_indicador categoria* cod_entidad anio valor 
 sort cod_indicador categoria* cod_entidad anio valor 
 
-export excel using "Indicadores FunLuker - tasa_transito.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/Indicadores FunLuker - tasa_transito.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **

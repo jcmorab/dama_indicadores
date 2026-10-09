@@ -3,13 +3,19 @@
 *Última modificación: 07/09/2026
 
 **#1. Declaración de carpeta de trabajo
+*Las rutas se definen en 00_config.do
 clear all
-cd "C:\Users\juanc\OneDrive\Luker\2026\Sistema M&E\Rutinas\5_atal_utc" // Directorio para ser modificado
+if "$dama" == "" {
+	display as error "Primero corra 00_config.do"
+	exit 198
+}
+capture mkdir "$trabajo/5_atal_utc"
+cd "$trabajo/5_atal_utc"
 
 **#2. Procesamientos
 
 **##2.1 Fluidez lectora
-import excel "FLUIDEZ_LECTURA_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/fundacion_fluidez_lectora/FLUIDEZ_LECTURA_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
 destring valor grado anio,replace
 lab define grado 1"Primero"2"Segundo"3"Tercero"4"Cuarto"5"Quinto"
 lab values grado grado
@@ -98,12 +104,12 @@ save ATAL_4,replace
 restore
 
 **##2.2 Universidad en tu colegio
-import excel "bd_historica_utc.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/fundacion_utc/bd_historica_utc.xlsx", sheet("Sheet1") firstrow clear
 keep año categoría dato indicador categoría2
 rename (año categoría dato indicador categoría2) ( ano categoría dato indicador categoría_2)
 save UTC_historico,replace
 
-import excel "LA_U_EN_TU_COLEGIO_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
+import excel "$bronce/fundacion_utc/LA_U_EN_TU_COLEGIO_ANONIMIZADO.xlsx", sheet("Sheet1") firstrow clear
 
 preserve
 g dato=1
@@ -168,7 +174,7 @@ rename (categoría categoría_2 dato) (categoria categoria_2 valor)
 order cod_indicador categoria categoria_2 cod_entidad entidad anio valor
 compress
 dropmiss,force
-export excel using "Indicadores FunLuker - UTC ATAL.xlsx",sheet("base",replace)firstrow(variables)
+export excel using "$plata/Indicadores FunLuker - UTC ATAL.xlsx",sheet("base",replace)firstrow(variables)
 
 *** FIN
 **
