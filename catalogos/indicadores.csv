@@ -1,0 +1,60 @@
+cod_indicador,indicador,dimension,seccion,periodicidad,fuente,unidad_medida,fecha_actualizacion,tabla,codigos_origen
+CV_01,Coeficiente de Gini de ingresos,Contexto socioeconómico,Condiciones de vida,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Puntaje,2026-03-01,datos,CV_01
+CV_02,Incidencia de pobreza monetaria,Contexto socioeconómico,Condiciones de vida,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,CV_02
+CV_03,Incidencia de pobreza monetaria extrema,Contexto socioeconómico,Condiciones de vida,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,CV_03
+CV_04,Porcentaje de nacidos vivos con bajo peso al nacer,Contexto socioeconómico,Condiciones de vida,Anual,Ministerio de Salud y Protección Social,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,CV_04
+CV_05,Tasa de suicidios (por cada 100.000 habitantes),Contexto socioeconómico,Condiciones de vida,Anual,Ministerio de Defensa,Tasa,2026-03-01,datos,CV_05
+ECO_01,Crecimiento del valor agregado,Contexto socioeconómico,Economía,Anual,DANE - Cuentas nacionales,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,ECO_01
+ECO_02,Valor agregado municipal,Contexto socioeconómico,Economía,Anual,DANE - Cuentas nacionales,Miles de millones de pesos,2026-03-01,datos,ECO_02
+ML_01,Población ocupada,Contexto socioeconómico,Mercado laboral,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-03-01,datos,ML_01
+ML_02,Tasa de desempleo,Contexto socioeconómico,Mercado laboral,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,"ML_02, ML_03"
+ML_04,Tasa de informalidad,Contexto socioeconómico,Mercado laboral,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,ML_04
+MLJ_01,Fuerza de trabajo juvenil,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-03-01,datos,MLJ_01
+MLJ_02,Porcentaje de egresados que solo estudian,Contexto socioeconómico,Mercado laboral juvenil,Anual,Seguimiento a egresados - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_02
+MLJ_19,Porcentaje de egresados que solo trabajan,Contexto socioeconómico,Mercado laboral juvenil,Anual,Seguimiento a egresados - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_02
+MLJ_20,Porcentaje de egresados que estudian y trabajan,Contexto socioeconómico,Mercado laboral juvenil,Anual,Seguimiento a egresados - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_02
+MLJ_21,Porcentaje de egresados que buscan trabajo,Contexto socioeconómico,Mercado laboral juvenil,Anual,Seguimiento a egresados - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_02
+MLJ_22,"Porcentaje de egresados que no estudian, no trabajan ni buscan trabajo",Contexto socioeconómico,Mercado laboral juvenil,Anual,Seguimiento a egresados - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_02
+MLJ_03,Población desocupada juvenil,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-03-01,datos,MLJ_03
+MLJ_04,Población en edad de trabajar (PET) de 15 a 28 años,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-03-01,datos,MLJ_04
+MLJ_05,Población fuera de la fuerza de trabajo juvenil,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-03-01,datos,MLJ_05
+MLJ_06,Población ocupada juvenil,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-03-01,datos,MLJ_06
+MLJ_07,Tasa de desocupación juvenil (TD),Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_07
+MLJ_08,Tasa de ocupación juvenil (TO),Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_08
+MLJ_09,Tasa global de participación juvenil (TGP),Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_09
+MLJ_10,Porcentaje de jóvenes que no estudian ni trabajan,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,MLJ_10
+MLJ_11,Número de jóvenes que no estudian ni trabajan,Contexto socioeconómico,Mercado laboral juvenil,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Personas,2026-05-11,datos,MLJ_11
+POB_01,Población total,Contexto socioeconómico,Población,Anual,DANE - Proyecciones de población,Personas,2026-03-01,datos,POB_01
+POB_02,Porcentaje de población de 65 años o más,Contexto socioeconómico,Población,Anual,DANE - Proyecciones de población,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,POB_02
+ATAL_01,Estudiantes que alcanzan el nivel estándar o avanzado - entrada,Educación,Aprendamos todos a leer,Anual,Aplicación pruebas EGRA - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,ATAL_01
+ATAL_02,Estudiantes que alcanzan el nivel estándar o avanzado - salida,Educación,Aprendamos todos a leer,Anual,Aplicación pruebas EGRA - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,ATAL_02
+ATAL_03,Prueba de entrada palabras leídas por minuto,Educación,Aprendamos todos a leer,Anual,Aplicación pruebas EGRA - Fundación Luker,Puntaje,2026-03-01,datos,ATAL_03
+ATAL_04,Prueba de salida palabras leídas por minuto,Educación,Aprendamos todos a leer,Anual,Aplicación pruebas EGRA - Fundación Luker,Puntaje,2026-03-01,datos,ATAL_04
+COBE_01,Tasa de cobertura neta en media,Educación,Cobertura educativa,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,COBE_01
+COBE_02,Tasa de cobertura neta en preescolar,Educación,Cobertura educativa,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,COBE_02
+COBE_03,Tasa de cobertura neta en primaria,Educación,Cobertura educativa,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,COBE_03
+COBE_04,Tasa de cobertura neta en secundaria,Educación,Cobertura educativa,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,COBE_04
+COBE_05,Tasa de deserción escolar,Educación,Cobertura educativa,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,COBE_05
+COBE_06,Tasa de tránsito inmediato a educación superior,Educación,Cobertura educativa,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,COBE_06
+CSOC_01,Porcentaje de estudiantes en proceso - trabajo en equipo,Educación,Competencias socioemocionales,Anual,Aplicación pruebas socioemocionales - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,CSOC_01
+CSOC_02,Porcentaje de estudiantes en riesgo - trabajo en equipo,Educación,Competencias socioemocionales,Anual,Aplicación pruebas socioemocionales - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,CSOC_02
+CSOC_03,Porcentaje de estudiantes prosperando - trabajo en equipo,Educación,Competencias socioemocionales,Anual,Aplicación pruebas socioemocionales - Fundación Luker,Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,CSOC_03
+UTC_01,Matrícula técnica por habitante,Educación,Matrícula técnica UTC,Anual,Registros administrativos - Fundación Luker,Tasa x 1000 habitantes,2026-03-01,datos,UTC_01
+UTC_02,Matrícula técnica UTC por colegio de origen,Educación,Matrícula técnica UTC,Anual,Registros administrativos - Fundación Luker,Estudiantes,2026-03-01,datos,UTC_02
+UTC_03,Matrícula técnica UTC por programa,Educación,Matrícula técnica UTC,Anual,Registros administrativos - Fundación Luker,Estudiantes,2026-03-01,datos_gestion,UTC_03
+UTC_04,Matrícula técnica UTC por institución oferente,Educación,Matrícula técnica UTC,Anual,Registros administrativos - Fundación Luker,Estudiantes,2026-03-01,datos,UTC_02
+SABER_01,Puntaje en ciencias naturales,Educación,Resultados pruebas Saber 11,Anual,Instituto Colombiano para la Evaluación de la Educación (ICFES),Puntaje,2026-03-01,datos,"SABER_01, SABER_08"
+SABER_02,Puntaje global,Educación,Resultados pruebas Saber 11,Anual,Instituto Colombiano para la Evaluación de la Educación (ICFES),Puntaje,2026-03-01,datos,"SABER_02, SABER_09"
+SABER_03,Puntaje en inglés,Educación,Resultados pruebas Saber 11,Anual,Instituto Colombiano para la Evaluación de la Educación (ICFES),Puntaje,2026-03-01,datos,"SABER_03, SABER_10"
+SABER_04,Puntaje en lectura crítica,Educación,Resultados pruebas Saber 11,Anual,Instituto Colombiano para la Evaluación de la Educación (ICFES),Puntaje,2026-03-01,datos,"SABER_04, SABER_11"
+SABER_05,Puntaje en matemáticas,Educación,Resultados pruebas Saber 11,Anual,Instituto Colombiano para la Evaluación de la Educación (ICFES),Puntaje,2026-03-01,datos,"SABER_05, SABER_12"
+SABER_06,Puntaje en sociales y ciudadanas,Educación,Resultados pruebas Saber 11,Anual,Instituto Colombiano para la Evaluación de la Educación (ICFES),Puntaje,2026-03-01,datos,"SABER_06, SABER_13"
+SABER_07,Porcentaje de planteles con nivel A y A+ en pruebas Saber 11,Educación,Resultados pruebas Saber 11,Anual,Ministerio de Educación Nacional (MEN),Porcentaje (el valor está multiplicado por 100),2026-03-01,datos,SABER_07
+GP_01,Inversión total del proyecto,Gestión de proyectos,Inversión,Anual,Fundación Luker,Pesos corrientes,2026-03-01,datos_gestion,GP_01
+GP_04,Inversión del proyecto con recursos propios,Gestión de proyectos,Inversión,Anual,Fundación Luker,Pesos corrientes,2026-03-01,datos_gestion,GP_01
+GP_05,Inversión del proyecto con recursos de terceros,Gestión de proyectos,Inversión,Anual,Fundación Luker,Pesos corrientes,2026-03-01,datos_gestion,GP_01
+GP_06,Inversión del proyecto con recursos USAID,Gestión de proyectos,Inversión,Anual,Fundación Luker,Pesos corrientes,2026-03-01,datos_gestion,GP_01
+GP_02,Número de beneficiarios,Gestión de proyectos,Beneficiarios,Anual,Fundación Luker,Total Beneficiarios,2026-03-01,datos_gestion,GP_02
+GP_03,Número de instituciones beneficiarias,Gestión de proyectos,Beneficiarios,Anual,Fundación Luker,N° de colegios,2026-03-01,datos_gestion,GP_03
+TNR_01,"Porcentaje de jóvenes de 15 a 28 años que realizaron, sin recibir remuneración, al menos una actividad de trabajo doméstico en su hogar durante la semana anterior",Contexto socioeconómico,Trabajo no remunerado y cuidado,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-09-22,datos,MLJ_12 a MLJ_18
+TNR_02,"Porcentaje de jóvenes de 15 a 28 años que realizaron, sin recibir remuneración, al menos una actividad de cuidado en su hogar durante la semana anterior",Contexto socioeconómico,Trabajo no remunerado y cuidado,Anual,DANE - Gran Encuesta Integrada de Hogares (GEIH),Porcentaje (el valor está multiplicado por 100),2026-09-22,datos,MLJ_12 a MLJ_18
